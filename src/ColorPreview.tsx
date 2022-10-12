@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef } from 'react';
-import { State } from './App';
+import { State } from './ColorContainer';
 
 interface Props {
   state: State;
@@ -37,8 +37,8 @@ const ColorPreview = ({ state }: Props) => {
     const { r: red, g: green, b: blue } = hexToRgb2(hexColor);
     const luma2 = (red * 299 + green * 587 + blue * 114) / 1000;
 
-    console.log(r === red && g === green && b === blue, { r, g, b, red, green, blue });
-    console.log({ luma1, luma2 });
+    /* console.log(r === red && g === green && b === blue, { r, g, b, red, green, blue });
+    console.log({ luma1, luma2 }); */
     // 색상 선택
     // return luma < 127.5 ? '#fff' : '#000'; // 글자색이
     return luma2 < 125 ? '#fff' : '#000'; // 글자색이
@@ -55,7 +55,7 @@ const ColorPreview = ({ state }: Props) => {
     <div className="color-preview">
       color preview
       <span ref={spanRef} className="color-code">
-        {color}
+        {color.toUpperCase()}
       </span>
     </div>
   );
