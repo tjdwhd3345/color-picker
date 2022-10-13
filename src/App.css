@@ -3,12 +3,35 @@
 }
 .container {
   display: flex;
+  gap: 40px;
   align-items: center;
   margin-top: 16px;
-  max-width: 600px;
+  max-width: 1200px;
 }
 .container > div {
-  flex: 1 0;
+}
+.color-picker {
+  display: flex;
+  align-items: center;
+}
+.color-picker .color-picker-input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+}
+.color-picker div {
+  position: relative;
+}
+.color-picker label {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 4px;
+}
+.color-preview {
+  display: flex;
 }
 .color-preview .color-code {
   width: 80px;
