@@ -91,7 +91,8 @@
   display: inline-block;
   border: none;
   border-radius: 10px;
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  font-size: inherit;
   overflow: hidden;
   padding: 10px;
   cursor: pointer;

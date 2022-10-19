@@ -1,3 +1,4 @@
+import Button from 'Button';
 import React, { useEffect, useReducer } from 'react';
 import ColorPicker from './ColorPicker';
 import ColorPreview from './ColorPreview';
@@ -42,9 +43,7 @@ const ColorContainer = ({ index, color, handleDelete, handleChange }: Props) => 
     <div className="container">
       <ColorPicker index={index} state={state} handleChange={handleChange} />
       <ColorPreview state={state} />
-      <button type="button" onClick={handleClick}>
-        삭제
-      </button>
+      <Button onClick={handleClick}>삭제</Button>
     </div>
   );
 };
